@@ -1,7 +1,7 @@
 <template>
   <div>
     <transition
-      name="transition-fade"
+      name="fade"
       mode="out-in"
     >
       <div
