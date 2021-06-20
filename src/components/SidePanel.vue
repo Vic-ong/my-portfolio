@@ -13,7 +13,7 @@
         {{ item.name }}
       </router-link>
       <a
-        href=""
+        href="https://drive.google.com/file/d/1yK3Q89FeqVIOGO3Qk3he8xQubwKIDoo0/view?usp=sharing"
         target="_blank"
         class="text-dark"
       >
