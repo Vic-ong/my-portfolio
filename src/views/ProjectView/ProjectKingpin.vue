@@ -202,7 +202,7 @@
         <div class="flex justify-center">
           <img
             :src="histogramImg"
-            class="h-70"
+            class="h-80"
           >
         </div>
 
