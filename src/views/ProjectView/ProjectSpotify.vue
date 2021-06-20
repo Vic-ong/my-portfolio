@@ -138,7 +138,13 @@
         <div>
           I decided to use a retro color palette with a Wes Anderson, Grand Budapest Hotel twist. That’s right, pastel colors! I painted it on the background of the application while letting the original colors of the album thumbnail shine.
         </div>
-        <div class="flex justify-center space-x-4">
+        <div class="flex justify-center">
+          <img
+            :src="colorSchemeImg"
+            class="h-80"
+          >
+        </div>
+        <div class="flex justify-center space-x-10">
           <div
             class="h-12 w-12 rounded-sm"
             style="background-color: #53B5BB"
@@ -155,6 +161,12 @@
             class="h-12 w-12 rounded-sm"
             style="background-color: #E7F0F0"
           />
+        </div>
+        <div class="flex justify-center">
+          <img
+            :src="signInImg"
+            class="h-60"
+          >
         </div>
         <div>
           For animations, I wanted to mimic the action of taking a vinyl disc from an album cover. I think it would create a cool effect and nostalgic sentiments.
@@ -270,6 +282,8 @@
   import { defineComponent, computed } from 'vue';
   import { useStore } from '@/composables/store';
   import titleImg from '@/assets/projects/spotify/title.jpg';
+  import colorSchemeImg from '@/assets/projects/spotify/color-scheme.jpg';
+  import signInImg from '@/assets/projects/spotify/sign-in.jpg';
   import authFlowImg from '@/assets/projects/spotify/auth-flow.jpg';
   import audioFeatureImg from '@/assets/projects/spotify/audio-features.jpg';
   import { authHandlerSnippet } from '@/data/snippets/spotify';
@@ -297,6 +311,8 @@
         error,
         project,
         titleImg,
+        colorSchemeImg,
+        signInImg,
         authFlowImg,
         audioFeatureImg,
         authHandlerSnippet,
