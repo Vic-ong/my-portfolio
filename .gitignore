@@ -1,0 +1,50 @@
+.DS_Store
+*.local
+*.swp
+*~
+dist
+dist-ssr
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Firebase
+.firebase
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
+node_modules
+
+# Optional eslint cache
+.eslintcache
+
+# package management
+package.json.*
+.npm
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+.env.local
+.env.*.local
+.env.staging
+.env.production
