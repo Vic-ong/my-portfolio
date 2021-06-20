@@ -7,17 +7,18 @@ import ProjectLyght from '@/views/ProjectView/ProjectLyght.vue';
 import ProjectPaul from '@/views/ProjectView/ProjectPaul.vue';
 import ProjectSpotify from '@/views/ProjectView/ProjectSpotify.vue';
 import ProjectShelve from '@/views/ProjectView/ProjectShelve.vue';
+import ProjectKingpin from '@/views/ProjectView/ProjectKingpin.vue';
 
 const routes = [
   {
-    name: 'about',
+    name: 'projects',
     path: '/',
-    component: About,
+    component: Projects,
   },
   {
-    name: 'projects',
-    path: '/projects',
-    component: Projects,
+    name: 'about',
+    path: '/about',
+    component: About,
   },
   {
     name: 'attributions',
@@ -48,14 +49,14 @@ const routes = [
   {
     name: 'project/kingpin',
     path: '/projects/kingpin',
-    component: ProjectLyght,
+    component: ProjectKingpin,
   },
   // 404 redirect
   {
     name: 'unkown-route',
     path: '/:pathMatch(.*)*',
     redirect: {
-      name: 'about',
+      name: 'projects',
     },
   },
 ];

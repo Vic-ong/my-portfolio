@@ -23,16 +23,19 @@
           >
             <img
               :src="titleImg"
-              class="h-20 rounded-md"
+              class="h-16 rounded-md"
             >
           </a>
         </div>
         <div>
-          A web app that
+          ℹ️ This is an on-going project
+        </div>
+        <div>
+          A simple web application that
           <b>
-            calculates your virtual character's compatibility with the others and recommends the top 3 team pairings
+            helps users organize their subscriptions and keeps track of their monthly expenses sourced from subscriptions.
           </b>
-          so that your probability of completing a p
+          Users can log in through Google and create their subscription shelf.
         </div>
 
         <div class="ml-5">
@@ -57,6 +60,26 @@
             </a>
           </div>
         </div>
+        <div class="underline">
+          Progress
+        </div>
+        <div class="ml-5">
+          <div>
+            ✅ Authentication
+          </div>
+          <div>
+            ✅ List, add, delete subscriptions
+          </div>
+          <div>
+            🟨 Add more selections + custom subscriptions
+          </div>
+          <div>
+            🟨 Interact with Google calendar to create reminders
+          </div>
+          <div>
+            🟨 Cancel subscriptions
+          </div>
+        </div>
       </TextBody>
     </div>
 
@@ -66,7 +89,14 @@
       </TextHeading>
       <TextBody>
         <div>
-          Similarity analysiesesenting data in a vector of measurable features.
+          There have been an
+          <a
+            href="https://www.forbes.com/sites/forbestechcouncil/2021/03/08/why-2021-will-be-the-year-of-consumption-based-services/?sh=6d0ef9f03610"
+            target="_blank"
+          >
+            increasing number of businesses offering subscription-based pricing
+          </a>
+          because it has proved to be more lucrative than the traditional pay-as-you-go pricing model, and it is incredibly frustrating for consumers. I, myself, have 7 subscriptions to keep tabs on. Most of the time, I don’t think about it and continue on with my life while getting charged silently. As a consumer, I would like to be aware of the expenses I’m currently bearing to avoid overspending. So, I decided to create a simple subscription management tool that’ll raise my attention to my monthly subscription-based expenses, and hopefully it would help others too.
         </div>
       </TextBody>
     </div>
@@ -77,14 +107,20 @@
       </TextHeading>
       <TextBody>
         <div>
-          I’d like to cr recommendations.
+          Since I just wanted a simple and straight-forward tool, I plan to start off with just basic and necessary features.
         </div>
         <div>
           <TextList>
-            Character creation system where users can personalized their character's skill set and skill levels
+            Login with Google
           </TextList>
           <TextList>
-            Compatibility score calculations using the proposed algorithms
+            List of subscriptions
+          </TextList>
+          <TextList>
+            Track a new subscription
+          </TextList>
+          <TextList>
+            Delete a subscription
           </TextList>
         </div>
       </TextBody>
@@ -96,7 +132,7 @@
       </TextHeading>
       <TextBody>
         <div>
-          Vite, Vue, Typescript, Tailwind CSS
+          Vite, Vue, Typescript, Tailwind CSS, Firebase Authentication
         </div>
       </TextBody>
     </div>
@@ -106,8 +142,32 @@
         Details
       </TextHeading>
       <TextBody>
+        <div class="underline">
+          Authentication
+        </div>
         <div>
-          There are 3 objectives that thefew assumptions for each mission.
+          For the sake of simplicity, I went with Firebase Authentication because it is easy to set up and allows me to quickly move forward to develop the actual tool. I chose the Google authentication plugin so that I skip the registration page and login form.
+        </div>
+        <CodeContainer>
+          <template #title>
+            firebase.ts
+          </template>
+          <CodeBlock>
+            {{ firebaseAuthSnippet }}
+          </CodeBlock>
+        </CodeContainer>
+
+        <div class="underline">
+          Focusing the pain points
+        </div>
+        <div>
+          The total expenses should be the most crucial information and the first information the user should see when entering. The overall UI should also be simple and clean-looking to minimize distractions.
+        </div>
+        <div class="flex justify-center">
+          <img
+            :src="shelfImg"
+            class="h-96 shadow-md"
+          >
         </div>
       </TextBody>
     </div>
@@ -117,8 +177,10 @@
 <script lang="ts">
   import { defineComponent, computed } from 'vue';
   import { useStore } from '@/composables/store';
+  import { firebaseAuthSnippet } from '@/data/snippets/shelve';
   import ProjectViewContainer from '@/components/ProjectViewContainer.vue';
-  import titleImg from '@/assets/projects/paul-the-octopus/title.jpg';
+  import titleImg from '@/assets/projects/shelve/title.jpg';
+  import shelfImg from '@/assets/projects/shelve/shelf.jpg';
 
   export default defineComponent({
     name: 'ProjectShelve',
@@ -137,7 +199,9 @@
         loading,
         error,
         project,
+        firebaseAuthSnippet,
         titleImg,
+        shelfImg,
       };
     },
   });
