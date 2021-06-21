@@ -19,11 +19,18 @@
             </div>
             <div>
               B.E. mechanical engineering & product design minor on paper 🎓 but transitioned
-              to computer science upon graduation.
+              to computer science after landing my first job!
             </div>
             <div>
-              Currently, I'm developing a solar energy investment platform that allows everyone
-              to contribute towards creating a greener future while getting monetary returns.
+              Currently, I'm developing an
+              <router-link :to="{ name: 'project/lyght' }">
+                impact investing platform
+              </router-link>
+              , creating a
+              <router-link :to="{ name: 'project/shelve-my-subs' }">
+                subscription management tool
+              </router-link>
+              and learning French.
             </div>
           </div>
 
