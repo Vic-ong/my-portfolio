@@ -138,35 +138,38 @@
         <div>
           I decided to use a retro color palette with a Wes Anderson, Grand Budapest Hotel twist. That’s right, pastel colors! I painted it on the background of the application while letting the original colors of the album thumbnail shine.
         </div>
-        <div class="flex justify-center">
-          <img
-            :src="colorSchemeImg"
-            class="h-80"
-          >
-        </div>
-        <div class="flex justify-center space-x-10">
-          <div
-            class="h-12 w-12 rounded-sm"
-            style="background-color: #53B5BB"
-          />
-          <div
-            class="h-12 w-12 rounded-sm"
-            style="background-color: #EEBB2E"
-          />
-          <div
-            class="h-12 w-12 rounded-sm"
-            style="background-color: #F9E4F0"
-          />
-          <div
-            class="h-12 w-12 rounded-sm"
-            style="background-color: #E7F0F0"
-          />
-        </div>
-        <div class="flex justify-center">
-          <img
-            :src="signInImg"
-            class="h-60"
-          >
+        <div class="flex items-center justify-center space-x-4">
+          <div class="flex justify-center">
+            <img
+              :src="colorSchemeImg"
+              style="height: 17rem"
+            >
+          </div>
+          <div class="flex flex-col items-center justify-center space-y-5">
+            <div
+              class="h-12 w-12 rounded-sm"
+              style="background-color: #53B5BB"
+            />
+            <div
+              class="h-12 w-12 rounded-sm"
+              style="background-color: #EEBB2E"
+            />
+            <div
+              class="h-12 w-12 rounded-sm"
+              style="background-color: #E7F0F0"
+            />
+            <div
+              class="h-12 w-12 rounded-sm"
+              style="background-color: #F9E4F0"
+            />
+          </div>
+          <div class="flex justify-center">
+            <img
+              :src="signInImg"
+              class="ml-3"
+              style="height: 16rem"
+            >
+          </div>
         </div>
         <div>
           For animations, I wanted to mimic the action of taking a vinyl disc from an album cover. I think it would create a cool effect and nostalgic sentiments.

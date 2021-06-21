@@ -30,7 +30,7 @@
         <div>
           Lyght
           <b>
-            connects individual retail buyers directly with green energy producers to participate in tangible environmental impactful projects
+            connects retail buyers with solar energy producers to participate in tangible environmental projects
           </b>
           whilst enjoying recurring income at competitive rates and with full transparency. The objective is to create an
           <a
@@ -56,7 +56,7 @@
         </div>
 
         <div class="text-sm italic">
-          Note: Since the code is confidential, I only provide the product demo and code snippets.
+          Note: Since the code is confidential, product demo is provided instead (see below).
         </div>
       </TextBody>
     </div>
@@ -67,14 +67,14 @@
       </TextHeading>
       <TextBody>
         <div>
-          This project spans 8 months and is my scope of work in
+          I am the lead engineer for this 8-month long project under
           <a
             href="https://www.lyght.com.tw/"
             target="_blank"
           >
-            Lyght Co.
+            Lyght Co., Taiwan.
           </a>
-          , Taiwan. I led the software development efforts from architecture design to code implementations in a cross-disciplinary team of 4:
+          I led the software development efforts from architecture design to code implementations in a cross-disciplinary team of 4:
         </div>
 
         <div>
@@ -97,7 +97,7 @@
       </TextHeading>
       <TextBody>
         <div>
-          This project is composed of 3 applications: an investment platform, an administration panel and backend services.
+          This project is composed of 3 components: an investment platform, an administration panel and backend services.
         </div>
 
         <div class="flex justify-center">
@@ -176,11 +176,18 @@
         Details
       </TextHeading>
       <TextBody>
+        <div class="flex flex-col items-center space-y-4">
+          <img
+            :src="projectPageImg"
+            class="rounded-md shadow-md"
+            style="height: 25rem"
+          >
+        </div>
         <div class="heading-3">
           Firebase and Google Cloud Platform
         </div>
         <div>
-          I got started by gathering information on the vision, business model, assumptions and risks.. Upon learning that we will need to quickly develop a minimum viable product and that we should account for potential tweaks in business model and partnerships, I decided to choose the
+          Having gathered information about the vision, business model and assumptions, I realized I will have to do rapid prototyping and account for tweaks in business model. I chose to use the
           <a
             href="https://firebase.google.com/"
             target="_blank"
@@ -274,6 +281,13 @@
             allowfullscreen
           />
         </div>
+        <div class="flex justify-center">
+          <img
+            :src="orderImg"
+            class="rounded-md shadow-md"
+            style="height: 22rem"
+          >
+        </div>
 
         <div class="heading-3">
           Fund operations & disbursement
@@ -337,6 +351,8 @@
       const titleImg = 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Flyght%2Ftitle.png?alt=media&token=62fb3d52-4578-4510-bedc-1919e77ca2c7';
       const architectureImg = 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Flyght%2Farchitecture.png?alt=media&token=79d5a9f5-b28c-4ddd-ae43-633ed0a6bfb6';
       const fundDisbursementImg = 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Flyght%2Ffund-disbursement.png?alt=media&token=dbdd098f-ba92-496d-8667-d8ef0606670a';
+      const projectPageImg = 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Flyght%2Fproject.jpg?alt=media&token=46591c80-c14b-44dd-bb5c-a62887323e66';
+      const orderImg = 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Flyght%2Forder.jpg?alt=media&token=44f981e4-0c08-4831-8bee-5f97ccd78ecd';
 
       const onboardingSnippets: Snippet[] = [
         {
@@ -380,6 +396,8 @@
         fundDisbursementImg,
         titleImg,
         architectureImg,
+        projectPageImg,
+        orderImg,
         cicdSnippet,
         onboardingSnippets,
       };

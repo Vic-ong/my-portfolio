@@ -149,6 +149,18 @@
         Details
       </TextHeading>
       <TextBody>
+        <div class="flex flex-col items-center space-y-4">
+          <img
+            :src="homepageImg"
+            class="rounded-md shadow-md"
+            style="height: 25rem;"
+          >
+          <img
+            :src="selectWagerImg"
+            class="rounded-md shadow-md"
+            style="height: 25rem;"
+          >
+        </div>
         <div class="underline">
           Creating personalized challenges
         </div>
@@ -314,6 +326,8 @@
       
       const histogramImg = 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Fkingpin%2Fhistogram.png?alt=media&token=8f622def-4c33-4819-b623-aab3b3e4d134';
       const titleImg = 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Fkingpin%2Ftitle.png?alt=media&token=dddc0f79-b4ce-47a9-a979-34e4db8a9761';
+      const homepageImg = 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Fkingpin%2Fhomepage.jpg?alt=media&token=86460b56-54a6-4a45-9a59-5abe96e58c71';
+      const selectWagerImg = 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Fkingpin%2Fselect-wager.jpg?alt=media&token=a1d14a35-ca9a-442d-b061-1f3343e25984';
 
       return {
         loading,
@@ -325,6 +339,8 @@
         getSnippet,
         sampleMatches,
         titleImg,
+        homepageImg,
+        selectWagerImg,
         histogramImg,
       };
     },

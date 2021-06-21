@@ -142,6 +142,12 @@
         Details
       </TextHeading>
       <TextBody>
+        <div class="flex flex-col items-center">
+          <img
+            :src="signInImg"
+            style="height: 25rem"
+          >
+        </div>
         <div class="underline">
           Authentication
         </div>
@@ -194,6 +200,7 @@
       const error = computed(() => project.error);
 
       const titleImg = 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Fshelve-my-subs%2Ftitle.png?alt=media&token=db38f5b3-4650-46fd-a560-aa2fa051fd37';
+      const signInImg = 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Fshelve-my-subs%2Fsign-in.jpg?alt=media&token=0f7e8c5b-d0cb-4076-ae90-698fca12e7d8';
       const shelfImg = 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Fshelve-my-subs%2Fhomepage.png?alt=media&token=573a1137-7b91-4de4-a42a-f865b14ac42e';
 
       return {
@@ -202,6 +209,7 @@
         project,
         firebaseAuthSnippet,
         titleImg,
+        signInImg,
         shelfImg,
       };
     },
