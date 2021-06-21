@@ -201,14 +201,14 @@
           Consistent tests and deployments
         </div>
         <div>
-          Given the nature of rapid prototyping, I’m very likely to push updates and releases frequently so I added continuous integration and continuous deployment (CI/CD) pipelines to the project using
+          Given the nature of rapid prototyping, I’m very likely to push updates and releases frequently so adding continuous integration and continuous deployment (CI/CD) pipelines to the project would be useful. The code below describes a
           <a
             href="https://about.gitlab.com/stages-devops-lifecycle/continuous-integration/"
             target="_blank"
           >
-            Gitlab.
+            Gitlab CI/CD pipeline
           </a>
-          Anytime I push my commits to the remote repository, the CI/CD pipeline will trigger test, build and deploy protocols to the designated environments.
+          I created for the project. Everytime I push commits to the remote repository, the pipeline will trigger a test, build and deploy protocols to the designated environments.
         </div>
         <div>
           <CodeContainer>
@@ -239,7 +239,14 @@
           >
             Chart.js
           </a>
-          to create the charts for data visualizations. The code below creates the onboarding UI and UX shown in the first product demo (the utilities and dependencies are extracted out for simplification).
+          to create the charts for data visualizations. The code below creates the onboarding UI components shown in the first product demo (the dependencies are extracted from the snippets. For more info, please see the
+          <a
+            href="https://github.com/Vic-ong/kingping-gg/tree/main/kingpin-web"
+            target="_blank"
+          >
+            source code
+          </a>
+          ).
         </div>
 
         <div>
