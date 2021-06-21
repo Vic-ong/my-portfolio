@@ -239,14 +239,7 @@
           >
             Chart.js
           </a>
-          to create the charts for data visualizations. The code below creates the onboarding UI components shown in the first product demo (the dependencies are extracted from the snippets. For more info, please see the
-          <a
-            href="https://github.com/Vic-ong/kingping-gg/tree/main/kingpin-web"
-            target="_blank"
-          >
-            source code
-          </a>
-          ).
+          to create the charts for data visualizations. The code below creates the onboarding UI components shown in the first product demo (the dependencies are extracted from the snippets and should be treated as pseudo code).
         </div>
 
         <div>
