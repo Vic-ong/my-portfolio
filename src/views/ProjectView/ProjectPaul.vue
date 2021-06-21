@@ -137,17 +137,23 @@
       </TextHeading>
       <TextBody>
         <div>
-          There are 3 objectives that the compatibility calculations need to adapt to. Thus, I made modifications on the computations based on a few assumptions for each mission.
+          There are 3 objectives that the compatibility calculations need to adapt to. Thus, I made modifications on the computations based on a few assumptions for each mission. The base formula to calculate Lp space and cosine similarity as shown below.
+        </div>
+        <div class="flex justify-center">
+          <img
+            :src="formulaImg"
+            class="h-24"
+          >
         </div>
 
-        <div class="flex space-x-10">
+        <div>
+          I will be using the sample character desribed in the image below as a point of reference for the rest of the discussions. As you can see, Jackson is a skilled magician with good creative capacity and people skills. However, he has little to no knowledge in hunting, engineering and medicine.
+        </div>
+        <div class="flex justify-center">
           <img
             :src="sampleCharacter"
             class="h-44"
           >
-          <div>
-            I will be using this sample character as a point of reference for the discussions below. As you can see, Jackson is a skilled magician with good creative capacity and people skills. However, he has little to no knowledge in hunting, engineering and medicine.
-          </div>
         </div>
 
         <div>
@@ -220,6 +226,7 @@
       const loading = computed(() => project.loading);
       const error = computed(() => project.error);
 
+      const formulaImg = 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Fpaul-the-octopus%2Fformula.png?alt=media&token=0991a6df-3eb8-4206-aaf8-d6e6abd3571e';
       const sampleCharacter = 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Fpaul-the-octopus%2Fprofile.png?alt=media&token=50a5511f-a5c4-4ebb-bd95-8ccc3acf5383';
       const titleImg = 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Fpaul-the-octopus%2Ftitle.png?alt=media&token=466820b7-766f-47ed-ae25-ad5f53dadebe';
       const result1 = 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Fpaul-the-octopus%2Fresult_1.png?alt=media&token=58db0072-f1bc-4488-9a81-42361455055f';
@@ -231,6 +238,7 @@
         error,
         project,
         titleImg,
+        formulaImg,
         sampleCharacter,
         result1,
         result2,
