@@ -158,14 +158,14 @@
           Creating personalized challenges
         </div>
         <div>
-          For a challenge to be personalized, I would have to determine users’ skill level based on their past performance. These data are availabel from the
+          For a challenge to be personalized, I would have to determine users’ skill level based on their past performance. These data are available on the
           <a
             href="https://documenter.getpostman.com/view/5519582/SzzgAefq#8a24430f-f7d7-489e-b325-cb6bfad60b63"
             target="_blank"
           >
-            warzone match data according to the Call Of Duty API
+            Warzone Matches route.
           </a>
-          Additionally, I can also filter the request within a range of start and end time.
+          Following the guide, I implemented a NodeJS Google function to manage data requests to the Call of Duty API.
         </div>
         <CodeContainer>
           <template #title>
