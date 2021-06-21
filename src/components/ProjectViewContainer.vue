@@ -3,7 +3,7 @@
     :loading="loading"
     :error="error"
   >
-    <PageTitle>
+    <PageTitle id="page-title">
       <div class="flex justify-between items-center">
         <div />
         <div>
@@ -25,17 +25,28 @@
         <slot />
       </div>
     </PageContent>
+    <div class="flex justify-center">
+      <div
+        class="flex items-center cursor-pointer"
+        @click="scrollToTop"
+      >
+        <IconArrowUp class="h-5 w-5 mr-2" />
+        Back to top
+      </div>
+    </div>
   </PageContainer>
 </template>
 
 <script lang="ts">
   import { defineComponent } from 'vue';
   import IconChevronLeft from '@/components/Icons/IconChevronLeft.vue';
+  import IconArrowUp from '@/components/Icons/IconArrowUp.vue';
 
   export default defineComponent({
     name: 'ProjectViewContainer',
     components: {
       IconChevronLeft,
+      IconArrowUp,
     },
     props: {
       loading: {
@@ -50,6 +61,18 @@
         type: String,
         required: true,
       },
+    },
+    setup() {
+      const scrollToTop = () => {
+        const el = document.getElementById('page-title');
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }
+      };
+
+      return {
+        scrollToTop,
+      };
     },
   });
 </script>

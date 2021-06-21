@@ -162,7 +162,7 @@
         <div class="flex justify-center">
           <img
             :src="result1"
-            class="h-60"
+            class="h-72"
           >
         </div>
 
@@ -178,7 +178,7 @@
         <div class="flex justify-center">
           <img
             :src="result2"
-            class="h-60"
+            class="h-72"
           >
         </div>
 
@@ -194,7 +194,7 @@
         <div class="flex justify-center">
           <img
             :src="result3"
-            class="h-60"
+            class="h-72"
           >
         </div>
       </TextBody>
@@ -206,11 +206,6 @@
   import { defineComponent, computed } from 'vue';
   import { useStore } from '@/composables/store';
   import ProjectViewContainer from '@/components/ProjectViewContainer.vue';
-  import titleImg from '@/assets/projects/paul-the-octopus/title.jpg';
-  import sampleCharacter from '@/assets/projects/paul-the-octopus/sample-character.jpg';
-  import result1 from '@/assets/projects/paul-the-octopus/1-result.jpg';
-  import result2 from '@/assets/projects/paul-the-octopus/2-result.jpg';
-  import result3 from '@/assets/projects/paul-the-octopus/3-result.jpg';
 
   export default defineComponent({
     name: 'ProjectPaul',
@@ -224,6 +219,12 @@
 
       const loading = computed(() => project.loading);
       const error = computed(() => project.error);
+
+      const sampleCharacter = 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Fpaul-the-octopus%2Fprofile.png?alt=media&token=50a5511f-a5c4-4ebb-bd95-8ccc3acf5383';
+      const titleImg = 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Fpaul-the-octopus%2Ftitle.png?alt=media&token=466820b7-766f-47ed-ae25-ad5f53dadebe';
+      const result1 = 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Fpaul-the-octopus%2Fresult_1.png?alt=media&token=58db0072-f1bc-4488-9a81-42361455055f';
+      const result2 = 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Fpaul-the-octopus%2Fresult_2.png?alt=media&token=bf0fbb81-8f6f-4a8b-a4d5-183d6ad95b72';
+      const result3 = 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Fpaul-the-octopus%2Fresult_3.png?alt=media&token=a0239301-10ad-4e36-b9e4-a3da3bb1d21c';
 
       return {
         loading,

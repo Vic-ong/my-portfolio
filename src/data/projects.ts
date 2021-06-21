@@ -1,9 +1,3 @@
-import lyghtThumbnail from '@/assets/projects/lyght/thumbnail.jpg';
-import spotifyThumbnail from '@/assets/projects/spotify/thumbnail.jpg';
-import paulThumbnail from '@/assets/projects/paul-the-octopus/thumbnail.jpg';
-import kingpinThumbnail from '@/assets/projects/kingpin/thumbnail.jpg';
-import shelveThumbnail from '@/assets/projects/shelve/thumbnail.jpg';
-
 export interface Project {
   id: string;
   name: string;
@@ -18,7 +12,7 @@ export const projects: Project[] = [
     id: 'lyght',
     name: 'Lyght',
     link: 'https://lyght-dev.web.app/',
-    img: lyghtThumbnail,
+    img: 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Flyght%2Fthumbnail.jpg?alt=media&token=ef803449-91f1-45df-9bdc-e6587a387909',
     tags: ['fintech', 'solar energy', 'large-scale'],
   },
   {
@@ -26,7 +20,7 @@ export const projects: Project[] = [
     name: 'My Spotify Features',
     link: 'https://my-spotify-features.web.app/',
     source: 'https://github.com/Vic-ong/my-spotify-features',
-    img: spotifyThumbnail,
+    img: 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Fspotify%2Fthumbnail.jpg?alt=media&token=e7ff0e1c-5d1e-49c0-8ca3-a6a2f801184e',
     tags: ['lifestyle', 'music features', 'small-scale'],
   },
   {
@@ -34,7 +28,7 @@ export const projects: Project[] = [
     name: 'Paul the Octopus',
     link: 'https://paul-the-octopus-v2.web.app/',
     source: 'https://github.com/Vic-ong/paul-the-octopus-v2',
-    img: paulThumbnail,
+    img: 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Fpaul-the-octopus%2Fthumbnail.jpg?alt=media&token=1944843f-7e0a-49e8-983d-eb2acffde900',
     tags: ['gaming', 'compatibility', 'small-scale'],
   },
   {
@@ -42,7 +36,7 @@ export const projects: Project[] = [
     name: 'Kingpin.gg',
     link: 'https://kingpin.gg/',
     source: 'https://github.com/Vic-ong/kingping-gg',
-    img: kingpinThumbnail,
+    img: 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Fkingpin%2Fthumbnail.jpg?alt=media&token=35c02052-e348-46bb-b4bb-3667aa7d29c0',
     tags: ['personalized challenge', 'medium-scale'],
   },
   {
@@ -50,7 +44,7 @@ export const projects: Project[] = [
     name: 'Shelve My Subs!',
     link: 'https://shelve-my-subs.web.app/',
     source: 'https://github.com/Vic-ong/shelve-my-subs',
-    img: shelveThumbnail,
+    img: 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Fshelve-my-subs%2Fthumbnail.jpg?alt=media&token=95f72fee-ae55-4dad-9c76-8d5c3f6693d0',
     tags: ['lifestyle', 'organization', 'small-scale'],
   },
 ];

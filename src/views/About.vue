@@ -56,7 +56,6 @@
 <script lang="ts">
   import { defineComponent } from 'vue';
   import dayjs from 'dayjs';
-  import profilePhoto from '@/assets/profile_photo.jpg';
   import IconGithub from '@/components/Icons/IconGithub.vue';
   import IconInstagram from '@/components/Icons/IconInstagram.vue';
   import IconLinkedIn from '@/components/Icons/IconLinkedIn.vue';
@@ -65,6 +64,7 @@
     name: 'About',
     setup() {
       const yearsOfExperience = dayjs().diff(dayjs('01-01-2017'), 'year', true).toFixed(1);
+      const profilePhoto = 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Fprofile_photo.jpg?alt=media&token=5cfed12c-0fcf-4615-86f2-f1583e013a6c';
 
       const socials = [
       {

@@ -256,7 +256,7 @@
         </div>
         <div class="flex justify-center">
           <iframe
-            src="https://www.youtube.com/embed/aOzl2taj9DQ"
+            src="https://www.youtube-nocookie.com/embed/aOzl2taj9DQ"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -266,7 +266,7 @@
         </div>
         <div class="flex justify-center">
           <iframe
-            src="https://www.youtube.com/embed/gr_ThxtayHU?start=5"
+            src="https://www.youtube-nocookie.com/embed/gr_ThxtayHU?start=5"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -289,7 +289,7 @@
         </div>
         <div class="flex justify-center">
           <iframe
-            src="https://www.youtube.com/embed/iuY74_5-R4g?start=5"
+            src="https://www.youtube-nocookie.com/embed/iuY74_5-R4g?start=5"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -314,9 +314,6 @@
     mobileVerificationSnippet,
     uploadPhotoSnippet,
   } from '@/data/snippets/lyght';
-  import titleImg from '@/assets/projects/lyght/title.jpg';
-  import architectureImg from '@/assets/projects/lyght/architecture.jpg';
-  import fundDisbursementImg from '@/assets/projects/lyght/fund-disbursement.jpg';
   import ProjectViewContainer from '@/components/ProjectViewContainer.vue';
   import TextList from '@/components/TextList.vue';
   import CodeContainer from '@/components/CodeContainer.vue';
@@ -336,6 +333,10 @@
 
       const loading = computed(() => project.loading);
       const error = computed(() => project.error);
+
+      const titleImg = 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Flyght%2Ftitle.png?alt=media&token=62fb3d52-4578-4510-bedc-1919e77ca2c7';
+      const architectureImg = 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Flyght%2Farchitecture.png?alt=media&token=79d5a9f5-b28c-4ddd-ae43-633ed0a6bfb6';
+      const fundDisbursementImg = 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Flyght%2Ffund-disbursement.png?alt=media&token=dbdd098f-ba92-496d-8667-d8ef0606670a';
 
       const onboardingSnippets: Snippet[] = [
         {

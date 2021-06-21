@@ -281,11 +281,6 @@
 <script lang="ts">
   import { defineComponent, computed } from 'vue';
   import { useStore } from '@/composables/store';
-  import titleImg from '@/assets/projects/spotify/title.jpg';
-  import colorSchemeImg from '@/assets/projects/spotify/color-scheme.jpg';
-  import signInImg from '@/assets/projects/spotify/sign-in.jpg';
-  import authFlowImg from '@/assets/projects/spotify/auth-flow.jpg';
-  import audioFeatureImg from '@/assets/projects/spotify/audio-features.jpg';
   import { authHandlerSnippet } from '@/data/snippets/spotify';
   import ProjectViewContainer from '@/components/ProjectViewContainer.vue';
   import CodeContainer from '@/components/CodeContainer.vue';
@@ -306,6 +301,13 @@
       const loading = computed(() => project.loading);
       const error = computed(() => project.error);
 
+      const titleImg = 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Fspotify%2Ftitle.png?alt=media&token=73b45898-aa0f-4c95-9491-d4f7bf5317a5';
+      const audioFeatureImg = 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Fspotify%2Faudio-features.png?alt=media&token=8e2b94a7-5116-49ea-91e8-676180e476d5';
+      const authFlowImg = 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Fspotify%2Fauth-flow.png?alt=media&token=60d6007e-dbff-417f-8dbb-38a1cd6d231f';
+      const colorSchemeImg = 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Fspotify%2Fcolor-scheme.jpg?alt=media&token=07c52c19-64f6-4220-8775-7f6f4e1ef56f';
+      const signInImg = 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Fspotify%2Flogin.png?alt=media&token=aaf7bbc8-a0ab-4c56-bc51-ce6b706f1e7b';
+
+      
       return {
         loading,
         error,

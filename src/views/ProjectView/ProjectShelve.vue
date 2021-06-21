@@ -179,8 +179,6 @@
   import { useStore } from '@/composables/store';
   import { firebaseAuthSnippet } from '@/data/snippets/shelve';
   import ProjectViewContainer from '@/components/ProjectViewContainer.vue';
-  import titleImg from '@/assets/projects/shelve/title.jpg';
-  import shelfImg from '@/assets/projects/shelve/shelf.jpg';
 
   export default defineComponent({
     name: 'ProjectShelve',
@@ -194,6 +192,9 @@
 
       const loading = computed(() => project.loading);
       const error = computed(() => project.error);
+
+      const titleImg = 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Fshelve-my-subs%2Ftitle.png?alt=media&token=db38f5b3-4650-46fd-a560-aa2fa051fd37';
+      const shelfImg = 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Fshelve-my-subs%2Fhomepage.png?alt=media&token=573a1137-7b91-4de4-a42a-f865b14ac42e';
 
       return {
         loading,

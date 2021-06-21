@@ -249,7 +249,7 @@
           <iframe
             width="560"
             height="315"
-            src="https://www.youtube.com/embed/epI2pqy1bXk"
+            src="https://www.youtube-nocookie.com/embed/epI2pqy1bXk"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -275,8 +275,6 @@
   import { Snippet } from '@/data/snippets/types';
   import { codMatchSnippet, matchDataSample, sampleMatches } from '@/data/snippets/kingpin';
   import ProjectViewContainer from '@/components/ProjectViewContainer.vue';
-  import titleImg from '@/assets/projects/kingpin/title.jpg';
-  import histogramImg from '@/assets/projects/kingpin/histogram.jpg';
   import CodeContainer from '@/components/CodeContainer.vue';
 
   export default defineComponent({
@@ -313,6 +311,9 @@
         const obj = list.find((x) => x.name === key);
         return obj ? obj.snippet : '';
       };
+      
+      const histogramImg = 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Fkingpin%2Fhistogram.png?alt=media&token=8f622def-4c33-4819-b623-aab3b3e4d134';
+      const titleImg = 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Fkingpin%2Ftitle.png?alt=media&token=dddc0f79-b4ce-47a9-a979-34e4db8a9761';
 
       return {
         loading,
