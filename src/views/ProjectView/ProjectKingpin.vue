@@ -28,25 +28,18 @@
           </a>
         </div>
         <div>
-          Kingpin.gg is an
+          Kingpin.gg is a
           <b>
-            esports betting web app for users bet on personalized
+            skill-based platform for
             <a
               href="https://www.callofduty.com/warzone"
               target="_blank"
             >
               Call of Duty
             </a>
-            game challenges
+            gamers to place bets on personalized challenges.
           </b>
-          by leveraging the
-          <a
-            href="https://documenter.getpostman.com/view/5519582/SzzgAefq#8a24430f-f7d7-489e-b325-cb6bfad60b63"
-            target="_blank"
-          >
-            Call of Duty API.
-          </a>
-          Users could also team up with other players, either using Kingpin or on their own. Based on the user’s historical performance, the app will provide 3-5 challenges that would be on par to or a little beyond their level of expertise for the user to choose from.
+          The app estimate players’ skill level and provide them with challenging bets that have slightly higher expectations from their average performance.
         </div>
 
         <div class="ml-5">
@@ -80,7 +73,7 @@
       </TextHeading>
       <TextBody>
         <div>
-          This is a side project that a friend and I worked on, in our free time, for about a year. The idea stems from our childhood memories where oftentimes when we play a mission-based game, we would jokingly (sometimes seriously) declare monetary bets with our siblings or friends claiming that we can defeat [insert a name of a final boss]. So, we figured why can’t we still do it today? And as any engineer would say, I bet I could build a system that does that so, lo and behold, we initiated this project. 😅
+          This is a side project that a friend of mine and I worked on, in our free time, for about a year. The idea stems from our childhood memories where oftentimes when we play a mission-based game, we would jokingly (sometimes seriously) declare monetary bets with our siblings or friends claiming that we can defeat [insert a name of a final boss]. So, we figured why can’t we still do it today? And as any engineer would say, I bet I could build a system that does that so, lo and behold, we initiated this project. 😅
         </div>
         <div>
           We picked Call Of Duty because they have an API we can work with and it is a game we’re familiar with. My role in this project is to create the architecture design and develop the applications whereas my friend creates the operational flow and develops the business logic.
@@ -165,14 +158,14 @@
           Creating personalized challenges
         </div>
         <div>
-          For a challenge to be personalized, I would have to determine users’ skill level based on their past matches. I can request for
+          For a challenge to be personalized, I would have to determine users’ skill level based on their past performance. These data are availabel from the
           <a
             href="https://documenter.getpostman.com/view/5519582/SzzgAefq#8a24430f-f7d7-489e-b325-cb6bfad60b63"
             target="_blank"
           >
-            warzone match data
+            warzone match data according to the Call Of Duty API
           </a>
-          from the Call Of Duty API given the users’ Activision ID. Additionally, I can filter the request within a range of start and end time.
+          Additionally, I can also filter the request within a range of start and end time.
         </div>
         <CodeContainer>
           <template #title>
@@ -193,11 +186,11 @@
         </CodeContainer>
 
         <div>
-          Now that I have a set of historical match data of a user, I can start profiling the data. One of the easiest ways to
+          Now that I have a set of match data, I can begin doing some data exploration and basic statistical analysis. My assumption is that we can estimate of the users' skill level based on the number of kills they have in each match.
           <b>
-            get an estimation of the user’s skill set is to look at the kill count
+            We can hypothesize that a user with higher average kill count per match equates to a user being more skilled or generally better.
           </b>
-          in recent matches. Given each match usually lasts around 30 minutes and assuming that a user plays 5 games on average per day, I sampled 60 records of an anonymous user’s most recent matches which roughly equates to 2 weeks worth of his/her gaming data.
+          Given each match usually lasts around 30 minutes and assuming that a user plays 5 games on average per day, I sampled 60 records of an anonymous user’s most recent matches which roughly equates to 2 weeks worth of his/her gaming data.
         </div>
         <CodeContainer>
           <template #title>
@@ -209,7 +202,7 @@
         </CodeContainer>
 
         <div>
-          Based on the sampling, we can observe that this user’s most frequent kill count ranges from 6 to 12 with a mean of 11 and a median of 10. Given that we want to provide personalized bets that are challenging enough for the user, a 15 kill count could be a good benchmark!
+          Based on the sampling, we can observe that this user’s most frequent kill count ranges from 6 to 12 with a mean of 11 and a median of 10. Given that we want to provide personalized bets that are challenging enough, the benchmark has to be higher than the mean and the median. For instance, a challenge to achieve 15 kills could be a good starting point!
         </div>
         <div class="flex justify-center">
           <img
@@ -219,7 +212,14 @@
         </div>
 
         <div>
-          Other factors that I account for when computing the personalization (see source code):
+          Ultimately, I added weights to account for other factors deemed important (
+          <a
+            href="https://github.com/Vic-ong/kingping-gg/blob/2ef20233138fedd5bb310967a4dfe5de5f99ace6/kingpin-callofduty-functions/src/services/callofduty/CallOfDuty.py#L76"
+            target="_blank"
+          >
+            see source code for more info
+          </a>
+          ):
         </div>
         <div>
           <TextList>
