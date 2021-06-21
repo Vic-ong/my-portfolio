@@ -33,21 +33,19 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { useRouter } from 'vue-router';
+import { useBreakpoints } from '@/composables/breakpoints';
 
 export default defineComponent({
   name: 'SidePanel',
   setup() {
     const router = useRouter();
+    const breakpoints = useBreakpoints();
 
     const items = [
       {
         name: 'Projects',
         routeName: 'projects',
       },
-      // {
-      //   name: 'Photos',
-      //   routeName: 'photos',
-      // },
       {
         name: 'About',
         routeName: 'about',
@@ -55,6 +53,7 @@ export default defineComponent({
     ];
     
     return {
+      breakpoints,
       items,
       router,
     };

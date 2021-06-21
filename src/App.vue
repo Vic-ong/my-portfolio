@@ -1,7 +1,10 @@
 <template>
-  <div class="flex">
-    <SidePanel />
-    <div class="h-screen flex-1 overflow-y-scroll py-10 px-14">
+  <div :class="breakpoints.smAndBelow ? '' : 'flex'">
+    <SidePanel v-if="breakpoints.mdAndAbove" />
+    <div
+      class="flex-1 overflow-y-scroll py-10 px-14"
+      :style="breakpoints.smAndBelow ? 'height: calc(100vh - 3.5rem)' : 'height: 100vh'"
+    >
       <router-view v-slot="{ Component, route }">
         <transition
           name="bounce"
@@ -14,17 +17,28 @@
         </transition>
       </router-view>
     </div>
+    <MobileMenu v-if="breakpoints.smAndBelow" />
   </div>
 </template>
 
 <script lang="ts">
   import { defineComponent } from 'vue';
+  import { useBreakpoints } from '@/composables/breakpoints';
   import SidePanel from '@/components/SidePanel.vue';
+  import MobileMenu from '@/components/MobileMenu.vue';
 
   export default defineComponent({
     name: 'App',
     components: {
       SidePanel,
+      MobileMenu,
+    },
+    setup() {
+      const breakpoints = useBreakpoints();
+
+      return {
+        breakpoints,
+      };
     },
   });
 </script>

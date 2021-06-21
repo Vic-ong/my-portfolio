@@ -4,7 +4,7 @@
       Projects
     </PageTitle>
     <PageContent>
-      <div class="grid grid-cols-3 gap-10">
+      <div class="grid md:grid-cols-2 lg-above:grid-cols-3 gap-10">
         <div
           v-for="item in items"
           :key="item.id"
