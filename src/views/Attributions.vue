@@ -7,10 +7,10 @@
       <div class="text-center space-y-7">
         <div>
           <div>
-            Icons & svgs
+            Icons and svgs
           </div>
           <a
-            href="https://unsplash.com/"
+            href="https://www.flaticon.com/"
             target="_blank"
           >
             Flaticon
@@ -19,14 +19,24 @@
 
         <div>
           <div>
-            Photos to aid descriptions
+            Photos to support descriptions
           </div>
-          <a
-            href="https://unsplash.com/"
-            target="_blank"
-          >
-            Unsplash
-          </a>
+          <div>
+            <a
+              href="https://unsplash.com/"
+              target="_blank"
+            >
+              Unsplash
+            </a>
+          </div>
+          <div>
+            <a
+              href="https://giphy.com/"
+              target="_blank"
+            >
+              Giphy
+            </a>
+          </div>
         </div>
       </div>
     </PageContent>
