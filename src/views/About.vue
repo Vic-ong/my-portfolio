@@ -30,7 +30,7 @@
               <router-link :to="{ name: 'project/shelve-my-subs' }">
                 subscription management tool.
               </router-link>
-              In my free time, I'm learning french.
+              In my free time, I take french lessons.
             </div>
           </div>
 
