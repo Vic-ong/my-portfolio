@@ -44,7 +44,7 @@ export const projects: Project[] = [
     name: 'Shelve My Subs!',
     link: 'https://shelve-my-subs.web.app/',
     source: 'https://github.com/Vic-ong/shelve-my-subs',
-    img: 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Fshelve-my-subs%2Fthumbnail.jpg?alt=media&token=95f72fee-ae55-4dad-9c76-8d5c3f6693d0',
+    img: 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Fshelve-my-subs%2Fthumbnail_new.png?alt=media&token=4f0b91ca-0d20-4136-9f80-9c1fcac5e28a',
     tags: ['lifestyle', 'organization', 'small-scale'],
   },
 ];
