@@ -11,7 +11,7 @@
               Hello there, I'm Vic 👋🏻
             </div>
             <div>
-              A software engineer with {{ yearsOfExperience }} years of work experience.
+              A software engineer with {{ yearsOfExperience === 'NaN' ? '4.5' : yearsOfExperience }} years of work experience.
             </div>
             <div>
               I spend most of my time either building stuff, exploring UI and UX designs,
