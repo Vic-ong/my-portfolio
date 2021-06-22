@@ -1,5 +1,5 @@
 <template>
-  <div class="h-14 flex justify-around items-center px-5 border-t border-gray">
+  <div class="h-14 flex justify-around items-center px-5 border-b border-gray">
     <router-link
       v-for="item in items"
       :key="item.routeName"
@@ -15,7 +15,7 @@
   import { defineComponent } from 'vue';
 
   export default defineComponent({
-    name: 'BottomPanel',
+    name: 'TopPanel',
     setup() {
       const items = [
         {
@@ -25,6 +25,10 @@
         {
           name: 'About',
           routeName: 'about',
+        },
+        {
+          name: 'Attributions',
+          routeName: 'attributions',
         },
       ];
 

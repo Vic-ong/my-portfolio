@@ -1,6 +1,7 @@
 <template>
   <div :class="breakpoints.smAndBelow ? '' : 'flex'">
     <SidePanel v-if="breakpoints.mdAndAbove" />
+    <TopPanel v-else />
     <div
       class="flex-1 overflow-y-scroll py-10 px-10 md-above:px-14"
       :style="breakpoints.smAndBelow ? 'height: calc(100vh - 3.5rem)' : 'height: 100vh'"
@@ -17,7 +18,6 @@
         </transition>
       </router-view>
     </div>
-    <BottomPanel v-if="breakpoints.smAndBelow" />
   </div>
 </template>
 
@@ -25,13 +25,13 @@
   import { defineComponent } from 'vue';
   import { initBreakpoints, useBreakpoints } from '@/composables/breakpoints';
   import SidePanel from '@/components/SidePanel.vue';
-  import BottomPanel from '@/components/BottomPanel.vue';
+  import TopPanel from '@/components/TopPanel.vue';
 
   export default defineComponent({
     name: 'App',
     components: {
       SidePanel,
-      BottomPanel,
+      TopPanel,
     },
     setup() {
       initBreakpoints();
