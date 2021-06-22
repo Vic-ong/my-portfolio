@@ -19,19 +19,7 @@
 
         <div>
           <div>
-            Cover photos & illustrations
-          </div>
-          <a
-            href="https://www.vecteezy.com/free-vector/savings"
-            target="_blank"
-          >
-            Vecteezy
-          </a>
-        </div>
-
-        <div>
-          <div>
-            Abstract photos
+            Photos to aid descriptions
           </div>
           <a
             href="https://unsplash.com/"
