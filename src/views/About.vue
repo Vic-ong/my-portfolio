@@ -22,15 +22,15 @@
               to computer science after landing my first job!
             </div>
             <div>
-              Currently, I'm developing an
+              Currently, I'm working on an
               <router-link :to="{ name: 'project/lyght' }">
                 impact investing platform
               </router-link>
-              , creating a
+              and a
               <router-link :to="{ name: 'project/shelve-my-subs' }">
-                subscription management tool
+                subscription management tool.
               </router-link>
-              and learning French.
+              In my free time, I'm learning french.
             </div>
           </div>
 
