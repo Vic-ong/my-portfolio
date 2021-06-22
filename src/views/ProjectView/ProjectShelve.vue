@@ -145,7 +145,7 @@
         <div class="flex flex-col items-center">
           <img
             :src="signInImg"
-            style="height: 25rem"
+            :style="view.lgAndAbove ? 'height: 25rem' : ''"
           >
         </div>
         <div class="underline">
@@ -172,7 +172,7 @@
         <div class="flex justify-center">
           <img
             :src="shelfImg"
-            class="h-96 shadow-md"
+            class="md-above:h-96 shadow-md"
           >
         </div>
       </TextBody>
@@ -182,6 +182,7 @@
 
 <script lang="ts">
   import { defineComponent, computed } from 'vue';
+  import { useBreakpoints } from '@/composables/breakpoints';
   import { useStore } from '@/composables/store';
   import { firebaseAuthSnippet } from '@/data/snippets/shelve';
   import ProjectViewContainer from '@/components/ProjectViewContainer.vue';
@@ -192,6 +193,7 @@
       ProjectViewContainer,
     },
     setup() {
+      const view = useBreakpoints();
       const { project, getProject } = useStore();
 
       getProject('shelve-my-subs');
@@ -206,6 +208,7 @@
       return {
         loading,
         error,
+        view,
         project,
         firebaseAuthSnippet,
         titleImg,

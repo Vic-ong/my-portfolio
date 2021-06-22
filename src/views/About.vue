@@ -4,8 +4,8 @@
       About
     </PageTitle>
     <PageContent>
-      <div class="w-3/4 grid grid-cols-3 gap-10">
-        <div class="col-span-2">
+      <div class="lg-above:w-3/4 grid lg-above:grid-cols-3 gap-10">
+        <div class="lg-above:col-span-2">
           <div class="space-y-5">
             <div>
               Hello there, I'm Vic 👋🏻
@@ -49,10 +49,10 @@
           </div>
         </div>
 
-        <div class="col-span-1">
+        <div class="md-below:flex md-below:justify-center md-below:order-first lg-above:col-span-1">
           <img
             :src="profilePhoto"
-            class=""
+            style="max-height: 20rem"
           >
         </div>
       </div>

@@ -146,12 +146,12 @@
           <img
             :src="homepageImg"
             class="rounded-md shadow-md"
-            style="height: 25rem;"
+            :style="view.lgAndAbove ? 'height: 25rem' : ''"
           >
           <img
             :src="selectWagerImg"
             class="rounded-md shadow-md"
-            style="height: 25rem;"
+            :style="view.lgAndAbove ? 'height: 25rem' : ''"
           >
         </div>
         <div class="underline">
@@ -207,7 +207,7 @@
         <div class="flex justify-center">
           <img
             :src="histogramImg"
-            class="h-80"
+            class="md-above:h-80"
           >
         </div>
 
@@ -265,7 +265,7 @@
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            style="height: 25rem; width: 40rem"
+            :style="view.lgAndAbove ? 'height: 25rem; width: 40rem' : 'width: 100%'"
             allowfullscreen
           />
         </div>
@@ -284,6 +284,7 @@
 <script lang="ts">
   import { defineComponent, ref, computed } from 'vue';
   import { useStore } from '@/composables/store';
+  import { useBreakpoints } from '@/composables/breakpoints';
   import { Snippet } from '@/data/snippets/types';
   import { codMatchSnippet, matchDataSample, sampleMatches } from '@/data/snippets/kingpin';
   import ProjectViewContainer from '@/components/ProjectViewContainer.vue';
@@ -296,6 +297,7 @@
       CodeContainer,
     },
     setup() {
+      const view = useBreakpoints();
       const { project, getProject } = useStore();
       const snippetSelection = ref('CodMatch.js');
 
@@ -332,6 +334,7 @@
       return {
         loading,
         error,
+        view,
         project,
         snippetSelection,
         snippets,

@@ -103,7 +103,7 @@
         <div class="flex justify-center">
           <img
             :src="architectureImg"
-            class="h-80"
+            class="lg-above:h-80"
           >
         </div>
 
@@ -180,7 +180,7 @@
           <img
             :src="projectPageImg"
             class="rounded-md shadow-md"
-            style="height: 25rem"
+            :style="view.lgAndAbove ? 'height: 25rem' : ''"
           >
         </div>
         <div class="heading-3">
@@ -245,11 +245,12 @@
         <div>
           <CodeContainer>
             <template #title>
-              <div class="flex space-x-4 overflow-scroll hide-scrollbar">
+              <div class="flex space-x-4 overflow-x-scroll hide-scrollbar">
                 <div
                   v-for="item in onboardingSnippets"
                   :key="item.name"
                   :class="item.name === onboardingSnippetSelection ? '' : 'text-gray-darken cursor-pointer'"
+                  class="flex-1"
                   @click="selectOnboardingSnippet(item.name)"
                 >
                   {{ item.name }}
@@ -261,13 +262,14 @@
             </CodeBlock>
           </CodeContainer>
         </div>
+        
         <div class="flex justify-center">
           <iframe
             src="https://www.youtube-nocookie.com/embed/aOzl2taj9DQ"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            style="height: 25rem; width: 40rem"
+            :style="view.lgAndAbove ? 'height: 25rem; width: 40rem' : 'width: 100%'"
             allowfullscreen
           />
         </div>
@@ -277,7 +279,7 @@
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            style="height: 25rem; width: 40rem"
+            :style="view.lgAndAbove ? 'height: 25rem; width: 40rem' : 'width: 100%'"
             allowfullscreen
           />
         </div>
@@ -285,7 +287,7 @@
           <img
             :src="orderImg"
             class="rounded-md shadow-md"
-            style="height: 22rem"
+            :style="view.lgAndAbove ? 'height: 22rem' : ''"
           >
         </div>
 
@@ -298,7 +300,7 @@
         <div class="flex justify-center">
           <img
             :src="fundDisbursementImg"
-            class="h-80"
+            class="lg-above:h-80"
           >
         </div>
         <div class="flex justify-center">
@@ -307,7 +309,7 @@
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            style="height: 25rem; width: 40rem"
+            :style="view.lgAndAbove ? 'height: 25rem; width: 40rem' : 'width: 100%'"
             allowfullscreen
           />
         </div>
@@ -318,6 +320,7 @@
 
 <script lang="ts">
   import { defineComponent, ref, computed } from 'vue';
+  import { useBreakpoints } from '@/composables/breakpoints';
   import { useStore } from '@/composables/store';
   import { Snippet } from '@/data/snippets/types';
   import {
@@ -329,18 +332,15 @@
     uploadPhotoSnippet,
   } from '@/data/snippets/lyght';
   import ProjectViewContainer from '@/components/ProjectViewContainer.vue';
-  import TextList from '@/components/TextList.vue';
-  import CodeContainer from '@/components/CodeContainer.vue';
 
   export default defineComponent({
     name: 'ProjectLyght',
     components: {
       ProjectViewContainer,
-      TextList,
-      CodeContainer,
     },
     setup() {
       const onboardingSnippetSelection = ref('OnboardingView.vue');
+      const view = useBreakpoints();
       const { project, getProject } = useStore();
 
       getProject('lyght');
@@ -389,6 +389,7 @@
       return {
         loading,
         error,
+        view,
         project,
         onboardingSnippetSelection,
         selectOnboardingSnippet,

@@ -5,8 +5,8 @@
   >
     <PageTitle id="page-title">
       <div class="flex justify-between items-center">
-        <div />
-        <div>
+        <div v-if="view.mdAndAbove" />
+        <div class="sm-below:text-left">
           {{ title }}
         </div>
         <router-link
@@ -21,7 +21,7 @@
       </div>
     </PageTitle>
     <PageContent>
-      <div class="max-w-4xl text-left space-y-10">
+      <div class="md-above:max-w-4xl text-left space-y-10">
         <slot />
       </div>
     </PageContent>
@@ -39,6 +39,7 @@
 
 <script lang="ts">
   import { defineComponent } from 'vue';
+  import { useBreakpoints } from '@/composables/breakpoints';
   import IconChevronLeft from '@/components/Icons/IconChevronLeft.vue';
   import IconArrowUp from '@/components/Icons/IconArrowUp.vue';
 
@@ -63,6 +64,7 @@
       },
     },
     setup() {
+      const view = useBreakpoints();
       const scrollToTop = () => {
         const el = document.getElementById('page-title');
         if (el) {
@@ -71,6 +73,7 @@
       };
 
       return {
+        view,
         scrollToTop,
       };
     },

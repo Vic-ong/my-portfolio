@@ -142,7 +142,7 @@
         <div class="flex justify-center">
           <img
             :src="formulaImg"
-            class="h-24"
+            class="md-above:h-24"
           >
         </div>
 
@@ -168,7 +168,7 @@
         <div class="flex justify-center">
           <img
             :src="result1"
-            class="h-72"
+            class="md-above:h-72"
           >
         </div>
 
@@ -184,7 +184,7 @@
         <div class="flex justify-center">
           <img
             :src="result2"
-            class="h-72"
+            class="md-above:h-72"
           >
         </div>
 
@@ -200,7 +200,7 @@
         <div class="flex justify-center">
           <img
             :src="result3"
-            class="h-72"
+            class="md-above:h-72"
           >
         </div>
       </TextBody>

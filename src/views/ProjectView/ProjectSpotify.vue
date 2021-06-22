@@ -138,14 +138,14 @@
         <div>
           I decided to use a retro color palette with a Wes Anderson, Grand Budapest Hotel twist. That’s right, pastel colors! I painted it on the background of the application while letting the original colors of the album thumbnail shine.
         </div>
-        <div class="flex items-center justify-center space-x-4">
+        <div class="flex md-below:flex-col items-center justify-center lg-above:space-x-4">
           <div class="flex justify-center">
             <img
               :src="colorSchemeImg"
-              style="height: 17rem"
+              :style="view.lgAndAbove ? 'height: 17rem' : ''"
             >
           </div>
-          <div class="flex flex-col items-center justify-center space-y-5">
+          <div class="flex lg-above:flex-col items-center justify-center md-below:space-x-5 lg-above:space-y-5">
             <div
               class="h-12 w-12 rounded-sm"
               style="background-color: #53B5BB"
@@ -166,8 +166,8 @@
           <div class="flex justify-center">
             <img
               :src="homepageImg"
-              class="ml-3"
-              style="height: 16rem"
+              class="md-below:mt-2 lg-above:ml-3"
+              :style="view.lgAndAbove ? 'height: 16rem' : ''"
             >
           </div>
         </div>
@@ -209,7 +209,7 @@
             loading="lazy"
             allowtransparency="true"
             allowfullscreen="true"
-            class="w-96"
+            class="lg-above:w-96"
           >
             See the Pen <a href='https://codepen.io/vic-ong/pen/eYvoWzZ'>eYvoWzZ</a> by Vic
             (<a href='https://codepen.io/vic-ong'>@vic-ong</a>) on <a href='https://codepen.io'>CodePen</a>.
@@ -273,7 +273,7 @@
         <div class="flex justify-center">
           <img
             :src="audioFeatureImg"
-            class="h-96"
+            class="md-above:h-96"
           >
         </div>
       </TextBody>
@@ -283,6 +283,7 @@
 
 <script lang="ts">
   import { defineComponent, computed } from 'vue';
+  import { useBreakpoints } from '@/composables/breakpoints';
   import { useStore } from '@/composables/store';
   import { authHandlerSnippet } from '@/data/snippets/spotify';
   import ProjectViewContainer from '@/components/ProjectViewContainer.vue';
@@ -297,6 +298,7 @@
       CodeBlock,
     },
     setup() {
+      const view = useBreakpoints();
       const { project, getProject } = useStore();
 
       getProject('my-spotify-features');
@@ -314,6 +316,7 @@
       return {
         loading,
         error,
+        view,
         project,
         titleImg,
         colorSchemeImg,

@@ -18,10 +18,12 @@ const windowWidth = ref(window.innerWidth);
 
 const onWidthChange = () => windowWidth.value = window.innerWidth;
 
-export const useBreakpoints = (): ComputedRef<Breakpoints> => {
+export const initBreakpoints = (): void => {
   onMounted(() => window.addEventListener('resize', onWidthChange));
   onUnmounted(() => window.removeEventListener('resize', onWidthChange));
+};
 
+export const useBreakpoints = (): ComputedRef<Breakpoints> => {
   const breakpoints = computed((): Breakpoints => {
     return {
       'xs': windowWidth.value <= 639,
