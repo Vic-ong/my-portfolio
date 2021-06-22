@@ -28,7 +28,7 @@ export const projects: Project[] = [
     name: 'Paul the Octopus',
     link: 'https://paul-the-octopus-v2.web.app/',
     source: 'https://github.com/Vic-ong/paul-the-octopus-v2',
-    img: 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Fpaul-the-octopus%2Fthumbnail.jpg?alt=media&token=1944843f-7e0a-49e8-983d-eb2acffde900',
+    img: 'https://firebasestorage.googleapis.com/v0/b/my-portfolio-45469.appspot.com/o/public%2Fpaul-the-octopus%2Fthumbnail.png?alt=media&token=718da3f5-f467-4f91-9658-f7b0ff006865',
     tags: ['gaming', 'compatibility', 'small-scale'],
   },
   {
